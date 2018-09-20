@@ -27,7 +27,7 @@ public class Catalogo {
         this.archivo = "Catalogo.bin";
     }
     
-    public void addComic(String sku, String nombre, String descripcion, String empresa, double precio, String img){
+    public void addComic(String sku, String nombre, String descripcion, String empresa, double precio, String img, Integer existencia){
         try{
             File file = new File(this.archivo);
             ObjectOutputStream oos = null;
@@ -35,7 +35,7 @@ public class Catalogo {
                 oos = new ObjectOutputStream(new FileOutputStream(this.archivo, true));
             else
                 oos = new ObjectOutputStream(new FileOutputStream(this.archivo));              
-            Comic comic = new Comic(sku, nombre, descripcion, empresa, precio, img);
+            Comic comic = new Comic(sku, nombre, descripcion, empresa, precio, img, existencia);
             oos.writeObject(comic);           
             oos.close();
         }catch(Exception e){

@@ -32,6 +32,7 @@ public class CRUD {
             String empresa;
             double precio;
             String img;
+            Integer existencia;
             switch(opc){
                 case 1:
                     System.out.print("\n\nSKU: ");
@@ -46,7 +47,9 @@ public class CRUD {
                     precio = Double.parseDouble(br.readLine());
                     System.out.print("\nPath de imagen: ");
                     img = br.readLine();
-                    catalogo.addComic(sku, nombre, descripcion, empresa, precio, img);                    
+                    System.out.print("\nCantidad en existencia: ");
+                    existencia = Integer.parseInt(br.readLine());
+                    catalogo.addComic(sku, nombre, descripcion, empresa, precio, img,existencia);                    
                     break;
                 case 2:
                     break;
