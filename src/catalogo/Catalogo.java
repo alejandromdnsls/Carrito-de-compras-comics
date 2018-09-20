@@ -72,16 +72,9 @@ public class Catalogo {
             while(true){
                 ObjectInputStream ois = new ObjectInputStream(fis);
                 Comic comic = (Comic)ois.readObject();
-                catalogo.add(comic);
-                /*
-                System.out.print("\n\nSKU: " + comic.getSku());                
-                System.out.print("\nNombre: " + comic.getNombre());                
-                System.out.print("\nDescripción: " + comic.getDescripcion());               
-                System.out.print("\nEmpresa: " + comic.getEmpresa());
-                System.out.print("\nPrecio: " + comic.getPrecio()); */               
+                catalogo.add(comic);                            
             }                   
-        }catch(EOFException e){
-            //System.out.println("\n\nCómics mostrados con éxito\n"); 
+        }catch(EOFException e){           
             return catalogo;
         }finally{
             fis.close();
