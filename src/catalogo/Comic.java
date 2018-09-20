@@ -18,6 +18,7 @@ public class Comic implements Serializable {
     String empresa;
     double precio;
     String img;
+    Integer existencia;
 
     public Comic(String sku, String nombre, String descripcion, String empresa, double precio, String img) {
         this.sku = sku;
@@ -75,6 +76,13 @@ public class Comic implements Serializable {
     public void setImg(String img) {
         this.img = img;
     }
-        
-    
+
+    public Integer getExistencia() {
+        return existencia;
+    }
+
+    public void setExistencia(Integer existencia) {
+        this.existencia = existencia;
+    }
+
 }
