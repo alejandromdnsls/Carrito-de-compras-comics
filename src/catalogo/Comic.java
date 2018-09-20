@@ -20,13 +20,14 @@ public class Comic implements Serializable {
     String img;
     Integer existencia;
 
-    public Comic(String sku, String nombre, String descripcion, String empresa, double precio, String img) {
+    public Comic(String sku, String nombre, String descripcion, String empresa, double precio, String img, Integer existencia) {
         this.sku = sku;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.empresa = empresa;
         this.precio = precio;
         this.img = img;
+        this.existencia = existencia;
     }
 
     public String getSku() {
