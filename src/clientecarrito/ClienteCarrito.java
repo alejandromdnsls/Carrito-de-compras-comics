@@ -78,6 +78,12 @@ public class ClienteCarrito {
             oos.writeObject(compras);
             oos.flush();
             
+            if(ois.readInt() == 1){
+                System.out.println("Tu pedido se ha realizado con éxito");
+            }else{
+                System.out.println("Ha ocurrido un error al realizar tu pedido, intentalo de nuevo");
+            }
+            
             oos.close();
             ois.close();
         } catch (Exception e) {

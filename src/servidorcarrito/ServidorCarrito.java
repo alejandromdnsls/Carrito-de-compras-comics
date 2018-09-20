@@ -42,6 +42,10 @@ public class ServidorCarrito {
                 for (String sku : compras.keySet()) {
                     System.out.println(sku + ": " + compras.get(sku));
                 }
+                
+                //TODO: modificar archivo existencias
+                Integer operacionExitosa = 1;
+                oos.writeInt(operacionExitosa);
 
                 oos.flush();
                 oos.close();
